@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0E0122">
+  <meta name="description" content="Nu Ki Açaí - cardápio interativo mobile-first com identidade roxa, visual premium e pedido via WhatsApp.">
+  <title>Nu Ki Açaí | Cardápio Interativo</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cardapio.css">
+  <link rel="stylesheet" href="css/animacoes.css">
+</head>
+<body data-whatsapp-number="">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="page-orb page-orb-a" aria-hidden="true"></div>
+  <div class="page-orb page-orb-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-grid">
+      <div class="brand" aria-label="Nu Ki Açaí">
+        <span class="brand-mark">NK</span>
+        <div>
+          <p class="brand-kicker">Nu Ki Açaí</p>
+          <p class="brand-subtitle">Açaí premium, montagem interativa e pedido rápido.</p>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#montagem">Montar pedido</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#contato">WhatsApp</a>
+      </nav>
+
+      <div class="header-badge">Pedido interativo</div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Cardápio mobile-first</p>
+          <h1>Monte o pedido sem perder o clima premium do Nu Ki Açaí.</h1>
+          <p class="lead">
+            Escolha a categoria, toque para adicionar e acompanhe o resumo em
+            tempo real antes de mandar no WhatsApp.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cardapio">Começar montagem</a>
+            <a class="button button-secondary" href="#montagem">Ver resumo</a>
+          </div>
+
+          <div class="hero-points" aria-label="Destaques do layout">
+            <span>Montagem rápida</span>
+            <span>Resumo vivo</span>
+            <span>Pronto para WhatsApp</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumo rápido do pedido">
+          <p class="hero-card-label">Pedido em andamento</p>
+          <div class="hero-card-total">
+            <strong data-total-units>0</strong>
+            <span>itens selecionados</span>
+          </div>
+          <p class="hero-card-note" data-hero-summary>Adicione produtos para ver a composição do pedido aqui.</p>
+          <div class="hero-facts">
+            <div>
+              <span>Categoria ativa</span>
+              <strong data-active-category-label>Todos</strong>
+            </div>
+            <div>
+              <span>Tipos no carrinho</span>
+              <strong data-cart-skus>0</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="cardapio" class="section">
+      <div class="container">
+        <div class="builder-layout">
+          <div class="builder-main">
+            <div class="section-heading">
+              <p class="eyebrow">Cardápio</p>
+              <h2>Blocos interativos para filtrar, escolher e montar o pedido.</h2>
+            </div>
+
+            <div class="builder-toolbar">
+              <div class="filter-bar" aria-label="Categorias do cardápio" data-filter-bar></div>
+              <p class="toolbar-note">Toque em + para adicionar, - para remover e veja o resumo atualizar na hora.</p>
+            </div>
+
+            <div class="catalog-grid" data-catalog aria-live="polite"></div>
+          </div>
+
+          <aside class="builder-summary" id="montagem">
+            <div class="summary-head">
+              <p class="eyebrow">Montagem</p>
+              <h3>Resumo do pedido</h3>
+              <p class="summary-kicker">
+                <span data-cart-units>0</span> unidades em <span data-cart-skus>0</span> tipos
+              </p>
+            </div>
+
+            <div class="summary-list" data-cart-list aria-live="polite"></div>
+
+            <div class="summary-total">
+              <span>Categoria ativa</span>
+              <strong data-summary-category>Todos</strong>
+            </div>
+
+            <div class="summary-actions">
+              <a class="button button-primary" data-whatsapp-button href="#" aria-disabled="true" tabindex="-1">WhatsApp pendente</a>
+              <button class="button button-secondary" type="button" data-clear-cart>Limpar pedido</button>
+            </div>
+
+            <p class="summary-note">O número do WhatsApp e os preços entram depois da aprovação final.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section section-contrast">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Fluxo</p>
+          <h2>Três passos simples para transformar o cardápio em pedido.</h2>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-index">01</span>
+            <h3>Escolha a categoria</h3>
+            <p>Filtre bases, extras, frutas e combos sem perder tempo rolando a tela.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">02</span>
+            <h3>Monte o carrinho</h3>
+            <p>Adicione quantidades com controles simples e acompanhe o resumo vivo.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-index">03</span>
+            <h3>Envie no WhatsApp</h3>
+            <p>Quando o número for definido, o texto do pedido já estará preparado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="site-footer">
+    <div class="container footer-grid">
+      <p>Nu Ki Açaí. Base criada para evoluir o cardápio interativo e o pedido via WhatsApp.</p>
+      <a class="whatsapp-link" href="#" aria-disabled="true" tabindex="-1">WhatsApp aguardando número</a>
+    </div>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
