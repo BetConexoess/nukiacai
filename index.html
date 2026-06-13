@@ -79,18 +79,26 @@
       </div>
     </section>
 
-    <section id="cardapio" class="section">
+    <section id="cardapio" class="section menu-section" aria-labelledby="cardapio-title">
       <div class="container">
+        <div class="menu-intro">
+          <div class="menu-intro__copy">
+            <p class="eyebrow">Cardápio Nu Ki Açaí</p>
+            <h2 id="cardapio-title">Seu açaí, do seu jeito.</h2>
+            <p class="lead">Escolha o tamanho, adicione seus favoritos e monte um pedido difícil de resistir.</p>
+          </div>
+
+          <div class="menu-intro__actions" aria-label="Resumo rápido do pedido">
+            <a class="button button-primary" href="#lista-cardapio">Ver cardápio</a>
+            <p class="menu-order-pill"><strong data-menu-intro-units>0</strong> itens no pedido</p>
+          </div>
+        </div>
+
         <div class="builder-layout">
           <div class="builder-main">
-            <div class="section-heading">
-              <p class="eyebrow">Cardápio</p>
-              <h2>Blocos interativos para filtrar, escolher e montar o pedido.</h2>
-            </div>
-
-            <div class="builder-toolbar">
+            <div class="builder-toolbar" id="lista-cardapio">
               <div class="filter-bar" aria-label="Categorias do cardápio" data-filter-bar></div>
-              <p class="toolbar-note">Toque em + para adicionar, - para remover e veja o resumo atualizar na hora.</p>
+              <p class="toolbar-note">Escolha uma categoria e adicione seus favoritos ao pedido.</p>
             </div>
 
             <div class="catalog-grid" data-catalog aria-live="polite"></div>
@@ -100,55 +108,43 @@
             <div class="summary-head">
               <p class="eyebrow">Montagem</p>
               <h3>Resumo do pedido</h3>
-              <p class="summary-kicker">
-                <span data-cart-units>0</span> unidades em <span data-cart-skus>0</span> tipos
-              </p>
+              <p class="summary-kicker"><span data-cart-units>0</span> itens em <span data-cart-skus>0</span> escolhas</p>
             </div>
 
             <div class="summary-list" data-cart-list aria-live="polite"></div>
 
             <div class="summary-total">
-              <span>Categoria ativa</span>
-              <strong data-summary-category>Todos</strong>
+              <span>Total de itens</span>
+              <strong data-summary-items>0</strong>
             </div>
 
             <div class="summary-actions">
-              <a class="button button-primary" data-whatsapp-button href="#" aria-disabled="true" tabindex="-1">WhatsApp pendente</a>
+              <button class="button button-primary" type="button" data-review-order disabled>Ver pedido</button>
               <button class="button button-secondary" type="button" data-clear-cart>Limpar pedido</button>
             </div>
 
-            <p class="summary-note">O número do WhatsApp e os preços entram depois da aprovação final.</p>
+            <p class="summary-note">O envio definitivo por WhatsApp fica para a próxima etapa.</p>
           </aside>
         </div>
       </div>
     </section>
 
-    <section id="como-funciona" class="section section-contrast">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Fluxo</p>
-          <h2>Três passos simples para transformar o cardápio em pedido.</h2>
-        </div>
+    <div class="mobile-order-bar" data-mobile-order-bar hidden>
+      <button class="mobile-order-button" type="button" data-mobile-review disabled>
+        <span><strong data-mobile-cart-units>0</strong> itens</span>
+        <span data-mobile-cart-status>Revisar pedido</span>
+        <span>Ver pedido</span>
+      </button>
+    </div>
 
-        <div class="steps-grid">
-          <article class="step-card">
-            <span class="step-index">01</span>
-            <h3>Escolha a categoria</h3>
-            <p>Filtre bases, extras, frutas e combos sem perder tempo rolando a tela.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">02</span>
-            <h3>Monte o carrinho</h3>
-            <p>Adicione quantidades com controles simples e acompanhe o resumo vivo.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-index">03</span>
-            <h3>Envie no WhatsApp</h3>
-            <p>Quando o número for definido, o texto do pedido já estará preparado.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="product-dialog" data-product-dialog hidden>
+      <div class="product-dialog__backdrop" data-close-details></div>
+      <section class="product-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="product-dialog-title" tabindex="-1">
+        <button class="product-dialog__close" type="button" data-close-details aria-label="Fechar detalhes">×</button>
+        <div class="product-dialog__content" data-product-dialog-content></div>
+      </section>
+    </div>
+
   </main>
 
   <footer id="contato" class="site-footer">
